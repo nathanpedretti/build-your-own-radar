@@ -14,6 +14,8 @@ jobs:
         run: docker build . --file Dockerfile --tag brownfield-radar:$(date +%s)
 
   publish:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Publish the Docker image
         uses: elgohr/Publish-Docker-Github-Action@master
